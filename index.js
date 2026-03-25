@@ -10,10 +10,6 @@ app.get("/",(req,res)=>{
 
 app.get("/:name",(req,res)=>{
     const name = req.params.name;
-
-    if(name=== "sharvari"){
-        res.send("hey Baby ")
-    }
     console.log(name);
     res.send({msg:`hello ${name}`})
     
