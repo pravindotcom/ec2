@@ -4,7 +4,7 @@ module.exports = {
             name: "myapp",
             script: "index.js",
             instances: "max",
-            exec_mode: "clustor",
+            exec_mode: "cluster",
             watch: false,
             env: {
                 NODE_ENV: "production",
