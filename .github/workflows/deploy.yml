@@ -22,4 +22,5 @@ jobs:
                  cd ec2
                  git pull origin main
                  npm install
-                 pm2 start index.js --name myapp || pm2 restart myapp
+                 pm2 delete all
+                 pm2 start index.js -i max --name myapp
