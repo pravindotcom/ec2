@@ -15,6 +15,10 @@ app.get("/:name",(req,res)=>{
     
 })
 
+app.get("/contact",(req,res)=>{
+    res.send({message:"This is contact page"})
+})
+
 app.listen(PORT,()=>{
     console.log(`Server is running on PORT:${PORT}`);
     
