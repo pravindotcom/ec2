@@ -21,5 +21,10 @@ jobs:
              script: | 
                  cd ec2
                  git pull origin main
-                 npm install
-                 pm2 start ecosystem.config.cjs || pm2 restart myapp
+                 
+                 docker stop mycontainer || true
+                 docker rm mycontainer || true
+
+                 docker build -t myapp .
+                 docker run -d -p 8080:8080 --name mycontainer myapp
+                 
