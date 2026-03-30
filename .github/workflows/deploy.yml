@@ -42,3 +42,4 @@ jobs:
 
                  docker run -d -p 8080:8080 --name mycontainer ${{ secrets.DOCKER_USERNAME  }}/myapp
                  
+# added docker hub configuration and deploy application
